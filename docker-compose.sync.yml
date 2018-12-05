@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  applications:
+    image: tianon/true
+    volumes:
+      - applications-sync:/var/www:nocopy
+volumes:
+  applications-sync:
+    external:
+      name: "applications-docker-sync"
